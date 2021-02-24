@@ -2,7 +2,7 @@ L.mapquest.key = 'bGIvPWAX9jDPExZQarnLYMiSA90mBVst';
 
 
 var map = L.mapquest.map('map', {
-  center: [33.685697, -117.825982],
+  center: [33.6405, -117.8443],
   layers: L.mapquest.tileLayer('map'),
   zoom: 13
 });
@@ -16,7 +16,7 @@ document.getElementById('searchBtn').addEventListener('click', event => {
   document.getElementById('city').value = ""
   document.getElementById('state').value = ""
 
-  axios.get(`http://open.mapquestapi.com/geocoding/v1/address?key=CwelIFvjcU2rKapuqZ6AcvE64IpoLS9R&location=${city},${state}`)
+  axios.get(`https://open.mapquestapi.com/geocoding/v1/address?key=CwelIFvjcU2rKapuqZ6AcvE64IpoLS9R&location=${city},${state}`)
     .then(res => {
       let latitude = res.data.results[0].locations[0].latLng.lat
       let longitude = res.data.results[0].locations[0].latLng.lng
@@ -90,6 +90,13 @@ document.getElementById('searchBtn').addEventListener('click', event => {
           draggable: false
         }).bindPopup(res.data.items[9].address.label).addTo(map);
         
+        for (let i=0; i <10; i++) {
+
+          let listElem = document.createElement('li')
+          listElem.textContent = `${res.data.items[i].address.houseNumber} `+ `${res.data.items[i].address.street} `+`${res.data.items[i].address.city}, `+`${res.data.items[i].address.stateCode} `+ `${res.data.items[i].address.postalCode}`
+          document.getElementById('list-items').append(listElem)
+        }
+
       })
       .catch(err => console.error(err))
     })
@@ -97,9 +104,7 @@ document.getElementById('searchBtn').addEventListener('click', event => {
     
     
     .catch(err => console.error(err))
+
+ 
+
 })
-
-
-
-
-
