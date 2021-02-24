@@ -90,10 +90,12 @@ document.getElementById('searchBtn').addEventListener('click', event => {
           draggable: false
         }).bindPopup(res.data.items[9].address.label).addTo(map);
         
+        document.getElementById('list-items').innerHTML = ""
         for (let i=0; i <10; i++) {
 
           let listElem = document.createElement('li')
           listElem.textContent = `${res.data.items[i].address.houseNumber} `+ `${res.data.items[i].address.street} `+`${res.data.items[i].address.city}, `+`${res.data.items[i].address.stateCode} `+ `${res.data.items[i].address.postalCode}`
+          
           document.getElementById('list-items').append(listElem)
         }
 
