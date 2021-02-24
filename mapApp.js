@@ -100,9 +100,9 @@ document.getElementById('searchBtn').addEventListener('click', event => {
       })
       .catch(err => console.error(err))
     })
-    
-    
-    
+
+
+
     .catch(err => console.error(err))
 
  
