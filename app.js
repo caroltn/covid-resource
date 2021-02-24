@@ -1,6 +1,8 @@
 
 //url for the covid vaccination sites
 
+
+/*
 document.getElementById('searchBtn').addEventListener('click', event => {
   event.preventDefault()
   let city = document.getElementById('city').value
@@ -26,3 +28,43 @@ document.getElementById('searchBtn').addEventListener('click', event => {
 
     .catch(err => console.error(err))
 })
+
+*/
+
+//Covid Info 
+const options = {
+  method: 'GET',
+  url: 'https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/npm-covid-data/northamerica',
+  headers: {
+    'x-rapidapi-key': '942aad0c2dmsh3a82931abe2aef2p10ac04jsn5dc198047fbe',
+    'x-rapidapi-host': 'vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com'
+  }
+};
+
+axios.request(options).then(function (response) {
+  let ActiveCases = response.data[0].ActiveCases
+  let TotalCases = response.data[0].TotalCases
+  let TotalDeaths = response.data[0].TotalDeaths
+  let TotalRecovered = response.data[0].TotalRecovered
+  //console.log(ActiveCases);
+  //console.log(TotalCases);
+  //console.log(TotalDeaths);
+  //console.log(TotalRecovered);
+
+
+
+  document.getElementById('cases').innerHTML = `
+  <h1>Live COVID Information</h1>
+  <p>Total Active Cases in the US: ${ActiveCases}</p>
+  <p>Total number of cases in the US: ${TotalCases}</p>
+  <p>Total number of deaths in the US: ${TotalDeaths}</p>
+  <p>Total number of recoveries in the US: ${TotalRecovered}</p>
+  `
+
+
+}).catch(function (error) {
+  console.error(error);
+});
+
+
+

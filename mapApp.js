@@ -33,69 +33,69 @@ document.getElementById('searchBtn').addEventListener('click', event => {
       });
 
       axios.get(`https://discover.search.hereapi.com/v1/discover?apikey=wapv_QGDUdLAYFEJ_ztgSot46ybSnWVvJkd78ECummU&q=Covid&at=${latitude},${longitude}&limit=10`)
-      .then(res => {
-        
-        for (let i = 0; i < 10; i++) {
-          
-          console.log(res)
-          
-        }
-        L.marker([res.data.items[0].position.lat, res.data.items[0].position.lng], {
-          icon: L.mapquest.icons.marker(),
-          draggable: false
-        }).bindPopup(res.data.items[0].address.label).addTo(map);
-        
-        L.marker([res.data.items[1].position.lat, res.data.items[1].position.lng], {
-          icon: L.mapquest.icons.marker(),
-          draggable: false
-        }).bindPopup(res.data.items[1].address.label).addTo(map);
-        
-        L.marker([res.data.items[2].position.lat, res.data.items[2].position.lng], {
-          icon: L.mapquest.icons.marker(),
-          draggable: false
-        }).bindPopup(res.data.items[2].address.label).addTo(map);
-        
-        L.marker([res.data.items[3].position.lat, res.data.items[3].position.lng], {
-          icon: L.mapquest.icons.marker(),
-          draggable: false
-        }).bindPopup(res.data.items[3].address.label).addTo(map);
-        
-        L.marker([res.data.items[4].position.lat, res.data.items[4].position.lng], {
-          icon: L.mapquest.icons.marker(),
-          draggable: false
-        }).bindPopup(res.data.items[4].address.label).addTo(map);
-        
-        L.marker([res.data.items[5].position.lat, res.data.items[5].position.lng], {
-          icon: L.mapquest.icons.marker(),
-          draggable: false
-        }).bindPopup(res.data.items[5].address.label).addTo(map);
-        
-        L.marker([res.data.items[6].position.lat, res.data.items[6].position.lng], {
-          icon: L.mapquest.icons.marker(),
-          draggable: false
-        }).bindPopup(res.data.items[6].address.label).addTo(map);
-        
-        L.marker([res.data.items[7].position.lat, res.data.items[7].position.lng], {
-          icon: L.mapquest.icons.marker(),
-          draggable: false
-        }).bindPopup(res.data.items[7].address.label).addTo(map);
-        
-        L.marker([res.data.items[8].position.lat, res.data.items[8].position.lng], {
-          icon: L.mapquest.icons.marker(),
-          draggable: false
-        }).bindPopup(res.data.items[8].address.label).addTo(map);
-        
-        L.marker([res.data.items[9].position.lat, res.data.items[9].position.lng], {
-          icon: L.mapquest.icons.marker(),
-          draggable: false
-        }).bindPopup(res.data.items[9].address.label).addTo(map);
-        
-      })
-      .catch(err => console.error(err))
+        .then(res => {
+
+          for (let i = 0; i < 10; i++) {
+
+            console.log(res)
+
+          }
+          L.marker([res.data.items[0].position.lat, res.data.items[0].position.lng], {
+            icon: L.mapquest.icons.marker(),
+            draggable: false
+          }).bindPopup(res.data.items[0].address.label).addTo(map);
+
+          L.marker([res.data.items[1].position.lat, res.data.items[1].position.lng], {
+            icon: L.mapquest.icons.marker(),
+            draggable: false
+          }).bindPopup(res.data.items[1].address.label).addTo(map);
+
+          L.marker([res.data.items[2].position.lat, res.data.items[2].position.lng], {
+            icon: L.mapquest.icons.marker(),
+            draggable: false
+          }).bindPopup(res.data.items[2].address.label).addTo(map);
+
+          L.marker([res.data.items[3].position.lat, res.data.items[3].position.lng], {
+            icon: L.mapquest.icons.marker(),
+            draggable: false
+          }).bindPopup(res.data.items[3].address.label).addTo(map);
+
+          L.marker([res.data.items[4].position.lat, res.data.items[4].position.lng], {
+            icon: L.mapquest.icons.marker(),
+            draggable: false
+          }).bindPopup(res.data.items[4].address.label).addTo(map);
+
+          L.marker([res.data.items[5].position.lat, res.data.items[5].position.lng], {
+            icon: L.mapquest.icons.marker(),
+            draggable: false
+          }).bindPopup(res.data.items[5].address.label).addTo(map);
+
+          L.marker([res.data.items[6].position.lat, res.data.items[6].position.lng], {
+            icon: L.mapquest.icons.marker(),
+            draggable: false
+          }).bindPopup(res.data.items[6].address.label).addTo(map);
+
+          L.marker([res.data.items[7].position.lat, res.data.items[7].position.lng], {
+            icon: L.mapquest.icons.marker(),
+            draggable: false
+          }).bindPopup(res.data.items[7].address.label).addTo(map);
+
+          L.marker([res.data.items[8].position.lat, res.data.items[8].position.lng], {
+            icon: L.mapquest.icons.marker(),
+            draggable: false
+          }).bindPopup(res.data.items[8].address.label).addTo(map);
+
+          L.marker([res.data.items[9].position.lat, res.data.items[9].position.lng], {
+            icon: L.mapquest.icons.marker(),
+            draggable: false
+          }).bindPopup(res.data.items[9].address.label).addTo(map);
+
+        })
+        .catch(err => console.error(err))
     })
-    
-    
-    
+
+
+
     .catch(err => console.error(err))
 })
 
