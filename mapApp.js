@@ -16,7 +16,7 @@ document.getElementById('searchBtn').addEventListener('click', event => {
   document.getElementById('city').value = ""
   document.getElementById('state').value = ""
 
-  axios.get(`http://open.mapquestapi.com/geocoding/v1/address?key=CwelIFvjcU2rKapuqZ6AcvE64IpoLS9R&location=${city},${state}`)
+  axios.get(`https://open.mapquestapi.com/geocoding/v1/address?key=CwelIFvjcU2rKapuqZ6AcvE64IpoLS9R&location=${city},${state}`)
     .then(res => {
       let latitude = res.data.results[0].locations[0].latLng.lat
       let longitude = res.data.results[0].locations[0].latLng.lng
