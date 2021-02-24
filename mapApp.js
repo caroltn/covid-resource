@@ -1,3 +1,10 @@
+L.mapquest.key = 'bGIvPWAX9jDPExZQarnLYMiSA90mBVst';
+
+var map = L.mapquest.map('map', {
+  center: [33.6846, -117.8265],
+  layers: L.mapquest.tileLayer('map'),
+  zoom: 13
+});
 
 document.getElementById('searchBtn').addEventListener('click', event => {
   event.preventDefault()
