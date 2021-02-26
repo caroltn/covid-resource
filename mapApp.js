@@ -13,7 +13,8 @@ document.getElementById('searchBtn').addEventListener('click', event => {
 
   let city = document.getElementById('city').value
   let state = document.getElementById('state').value
-   if (state.toLowercase()=== 'ca') {
+
+   if (state === 'ca' || state === 'CA' || state=== 'Ca' || state === 'cA')  {
      state = 'california'
    }
   document.getElementById('city').value = ""
@@ -95,10 +96,17 @@ document.getElementById('searchBtn').addEventListener('click', event => {
         document.getElementById('list-items').innerHTML = ""
         for (let i=0; i <10; i++) {
 
-          let listElem = document.createElement('li')
-          listElem.textContent = `${res.data.items[i].address.houseNumber} `+ `${res.data.items[i].address.street} `+`${res.data.items[i].address.city}, `+`${res.data.items[i].address.stateCode} `+ `${res.data.items[i].address.postalCode}`
+          let aElem = document.createElement('a')
+          // let listElem = document.createElement('li')
+          aElem.href = `https://www.google.com/maps/place/${res.data.items[i].address.houseNumber}+${res.data.items[i].address.street}+${res.data.items[i].address.city}`
           
-          document.getElementById('list-items').append(listElem)
+          // listElem.textContent = `${res.data.items[i].address.houseNumber} `+ `${res.data.items[i].address.street} `+`${res.data.items[i].address.city}, `+`${res.data.items[i].address.stateCode} `+ `${res.data.items[i].address.postalCode}`
+          aElem.target = "_blank"
+          aElem.innerHTML = `
+          <li>${res.data.items[i].address.houseNumber} ` + `${res.data.items[i].address.street} ` + `${res.data.items[i].address.city}, ` + `${res.data.items[i].address.stateCode} ` + `${res.data.items[i].address.postalCode}</li>
+          `
+         
+          document.getElementById('list-items').append(aElem)
         }
 
       })
