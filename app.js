@@ -54,7 +54,7 @@ axios.request(options).then(function (response) {
 
 
   document.getElementById('cases').innerHTML = `
-  <h1>Live COVID Information</h1>
+  <h3>Live COVID Information</h3>
   <p>Total Active Cases in the US: ${ActiveCases}</p>
   <p>Total number of cases in the US: ${TotalCases}</p>
   <p>Total number of deaths in the US: ${TotalDeaths}</p>
