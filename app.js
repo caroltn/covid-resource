@@ -50,14 +50,26 @@ axios.request(options).then(function (response) {
   //console.log(TotalCases);
   //console.log(TotalDeaths);
   //console.log(TotalRecovered);
-
-  document.getElementById('cases').innerHTML = `
-  <p>Total Active Cases in the US: ${ActiveCases}</p>
-  <p>Total number of cases in the US: ${TotalCases}</p>
-  <p>Total number of deaths in the US: ${TotalDeaths}</p>
-  <p>Total number of recoveries in the US: ${TotalRecovered}</p>
-  `
-
+  /*
+    document.getElementById('cases').innerHTML = `
+    <p>Total Active Cases in the US: ${ActiveCases}</p>
+    <p>Total number of cases in the US: ${TotalCases}</p>
+    <p>Total number of deaths in the US: ${TotalDeaths}</p>
+    <p>Total number of recoveries in the US: ${TotalRecovered}</p>
+    `
+    */
+  document.getElementById('totalActive').innerHTML = `
+<p>${ActiveCases}</p>
+`
+  document.getElementById('totalCummulative').innerHTML = `
+<p>${TotalCases}</p>
+`
+  document.getElementById('totalDeaths').innerHTML = `
+<p>${TotalDeaths}</p>
+`
+  document.getElementById('totalRecovered').innerHTML = `
+<p>${TotalRecovered}</p>
+`
 
 }).catch(function (error) {
   console.error(error);
