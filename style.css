@@ -1,0 +1,38 @@
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+h4 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+li {
+  font-size: small;
+  margin: 6px;
+}
+
+.card-title {
+  text-align: center;
+  font-size: small;
+  font-weight: bold;
+}
+
+.card-action {
+  background-color: navy;
+}
+
+.casesText{
+color:white;
+font-weight: bold;
+text-align: center;
+font-size: medium;
+}
