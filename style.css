@@ -20,4 +20,19 @@ li {
   margin: 6px;
 }
 
-#footer
+.card-title {
+  text-align: center;
+  font-size: small;
+  font-weight: bold;
+}
+
+.card-action {
+  background-color: navy;
+}
+
+.casesText{
+color:white;
+font-weight: bold;
+text-align: center;
+font-size: medium;
+}
