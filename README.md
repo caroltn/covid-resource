@@ -1,4 +1,4 @@
-# Project1: COVID Resource Application
+# Project 1: COVID Resource Application
 ## Team Members
 - Yafiet Isaac
 - Joseph Nielsen
