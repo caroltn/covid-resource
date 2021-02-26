@@ -37,7 +37,6 @@ document.getElementById('searchBtn').addEventListener('click', event => {
         
         for (let i = 0; i < 10; i++) {
           
-          console.log(res)
           
         }
         L.marker([res.data.items[0].position.lat, res.data.items[0].position.lng], {
