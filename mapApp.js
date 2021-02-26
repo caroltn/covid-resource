@@ -13,6 +13,9 @@ document.getElementById('searchBtn').addEventListener('click', event => {
 
   let city = document.getElementById('city').value
   let state = document.getElementById('state').value
+   if (state.toLowercase()=== 'ca') {
+     state = 'california'
+   }
   document.getElementById('city').value = ""
   document.getElementById('state').value = ""
 
