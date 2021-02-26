@@ -51,10 +51,7 @@ axios.request(options).then(function (response) {
   //console.log(TotalDeaths);
   //console.log(TotalRecovered);
 
-
-
   document.getElementById('cases').innerHTML = `
-  <h3>Live COVID Information</h3>
   <p>Total Active Cases in the US: ${ActiveCases}</p>
   <p>Total number of cases in the US: ${TotalCases}</p>
   <p>Total number of deaths in the US: ${TotalDeaths}</p>
