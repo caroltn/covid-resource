@@ -8,6 +8,10 @@
 ## Application Description
 For those who are looking to get tested for COVID and are curious about recent U.S. cases. COVID Resource allows users to search for COVID testing centers by city and state and shows users the 10 closest locations. 
 
+## Preview
+
+![alt screenshot](images/covidResource.png)
+
 ## Tools and APIs Used
 - HTML
 - CSS
